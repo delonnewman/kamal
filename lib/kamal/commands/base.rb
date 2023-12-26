@@ -70,6 +70,10 @@ module Kamal::Commands
         args.compact.unshift :docker
       end
 
+      def echo(*args)
+        args.compact.unshift :echo
+      end
+
       def tags(**details)
         Kamal::Tags.from_config(config, **details)
       end
